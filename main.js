@@ -16,7 +16,10 @@
 
     //Populate targets
     for (var i = 0; i < 3; i++) {
-      $('.container').append(`<img class ='target' id = '${i}' src='assets/target.png'>`);
+      $('.container').append(`
+        <div class = 'target'>
+        <img id = 't${i}' src='assets/target.png'>
+        </div>`);
     }
 
     // HIT-event -
