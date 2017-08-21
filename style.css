@@ -6,6 +6,7 @@ html {
   min-height: 100vh;
   cursor: url('assets/crosshair.png'), crosshair;
 }
+/*START MENU*/
 .rules{
   align-items: flex-end;
   display: flex;
@@ -17,6 +18,8 @@ html {
 .start{
   text-align: center;
 }
+
+/*GAMEPLAY*/
 #timer{
   float: left;
   text-align: left;

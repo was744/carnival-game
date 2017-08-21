@@ -13,11 +13,14 @@
   function createGame() {
     clock();
     totalScore();
+
+    //Populate targets
     for (var i = 0; i < 3; i++) {
       $('.container').append(`<img class ='target' id = '${i}' src='assets/target.png'>`);
     }
 
-    //TARGET HIT - must be in createGame()
+    // HIT-event -
+    //----must be in createGame() -> scope issue?
     $('.target').on('click', function() {
       console.log('target hit');
       score = score + 250;
@@ -27,10 +30,10 @@
 
   } //END createGame()
 
+
   function totalScore() {
     $('#score span').text(score);
   };
-
 
 
   //Playtime
@@ -51,7 +54,6 @@
       }
       $('#timer').text(mins + ":" + secs)
     }, 1000);
-  };
-  //end playtime
+  }; //end clock function
 
 })();
