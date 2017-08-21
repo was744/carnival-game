@@ -3,12 +3,35 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Test your skill</title>
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="welcome">
+    <div class="rules">
+      <h1> RULES </h1>
+      <ul>
+        <li>Hit the targets by clicking on them</li>
+        <li>Points are awarded for each hit</li>
+        <li>Each miss deducts points</li>
+        <li>Reach the next level every 1,000 pts</li>
+        <li>Miss too much and you lose</li>
+      </ul>
+    </div>
+    <div class="start">
+      <h2>Click to Start</h2>
+      <img src="assets/target.png" alt="click here to start">
+    </div>
+  </div>
 
+  <div class="container">
+    <div id='timer'> </div>
+    <p id='score'>Score: <span></span></p>
+    
+  </div>
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   <script src="main.js" charset="utf-8"></script>
 </body>

@@ -1,0 +1,27 @@
+html {
+  background: url('assets/welcome.jpg') no-repeat center center ;
+  background-size: cover;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 24px;
+  min-height: 100vh;
+  cursor: url('assets/crosshair.png'), crosshair;
+}
+.rules{
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  clear: both;
+  bottom: 0px;
+}
+.start{
+  text-align: center;
+}
+#timer{
+  float: left;
+  text-align: left;
+}
+#score{
+  float: right;
+  margin: 0px;
+}
