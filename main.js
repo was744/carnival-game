@@ -14,7 +14,7 @@
     clock();
     totalScore();
 
-    //Populate targets
+    //Build targets
     for (var i = 0; i < 3; i++) {
       $('.container').append(`
         <div class = 'target'>
