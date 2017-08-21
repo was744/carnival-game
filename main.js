@@ -12,16 +12,24 @@
 
   function createGame() {
     clock();
-    $('#score span').text(score);
-
+    totalScore();
     for (var i = 0; i < 3; i++) {
-      $('.container').append(`<img id ='target', '${i}' src='assets/target.png'>`);
+      $('.container').append(`<img class ='target' id = '${i}' src='assets/target.png'>`);
     }
-  } //END play()
 
-  $('#target').on('click', function() {
-    console.log('target hit');
-  });
+    //TARGET HIT - must be in createGame()
+    $('.target').on('click', function() {
+      console.log('target hit');
+      score = score + 250;
+      totalScore();
+    });
+
+
+  } //END createGame()
+
+  function totalScore() {
+    $('#score span').text(score);
+  };
 
 
 
