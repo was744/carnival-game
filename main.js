@@ -1,13 +1,16 @@
 (function() {
   console.log('Ready to play');
-  var score = 0;
+  $("#hello").get(0).play();
+
+  var score = 1500;
+  var miss = 200;
   var speed = '8s';
   var bullseye = 'assets/target.png';
-  var miss = 200;
+  var background = 'assets/game.jpg';
 
   $('.start img').on('click', function() {
     console.log('start clicked');
-    $('html').css('background-image', `url('assets/game.jpg')`);
+    $('html').css('background-image', `url(${background})`);
     $('.welcome').hide();
     createGame();
   })
@@ -35,11 +38,12 @@
     //----must be in createGame() -> scope issue?
     $('html').on('click', function(e) {
       var $target = $(e.target);
+      $('#fire').get(0).play();
       if ($target.is('img')) {
         score = score + 250;
         console.log('target hit');
         $target.attr('src', 'assets/hit.png');
-        $target.delay(500).fadeOut();
+        $target.delay(300).fadeOut();
 
         setTimeout(() => {
           $target.attr('src', `${bullseye}`);
@@ -56,7 +60,7 @@
 
 
   function scoreKeeper() {
-    $('#score span').text(score);
+    $('#score span').text('Score: '+ score);
     //Not intended purpose for switch, possibly change to if else statements???
     switch (true) {
       case (score < 0):
@@ -72,48 +76,59 @@
         $('#t1').css('position', 'absolute');
         $('#t1').css('animation-name', 'lvl_2');
         break;
-      case (score >= 1000):
+      case (score >= 1000 && score < 2000):
         console.log('level 3');
         $('#t0').css('position', 'absolute');
         $('#t0').css('animation-name', 'faded');
         $('#t2').css('position', 'absolute');
         $('#t2').css('animation-name', 'lvl_3');
-        speed = '5s';
         miss = 400;
-        updateTarget();
+        updateGame();
+        break;
+      case (score >= 2000 && score <= 3000):
+        console.log('lvl-4: Nelly');
+        background = 'assets/duckhunt.png';
+        bullseye = 'assets/duck.png';
+        $('img').css('max-height', '5em');
+        speed = '5s';
+        miss = 800;
+        updateGame();
         break;
       default:
     }
   }; //End scoreKeeper
 
   //Changes target img and speed according according to lvl
-  function updateTarget() {
+  function updateGame() {
     console.log(speed);
     for (var i = 0; i < 3; i++) {
       //target img
       $(`t${i}`).attr('src', `${bullseye}`);
       //speed
       $(`#t${i}`).css('animation-duration', `${speed}`);
+      //background
+      $('html').css('background-image', `url('${background}')`);
     }
-  }; //end updateTarget
+  }; //end updateGame
 
   //Playtime
   function clock() {
-    var secs = 0;
-    var mins = 0;
+    var secs = 60;
 
     timer = setInterval(function() {
-      secs++
-      if (secs < 10) {
-        secs = "0" + secs
-      } else if (secs == 60) {
-        secs = "00"
-        mins++
-        if (mins < 10) {
-          mins = "0" + mins
-        }
+      secs--
+      if (secs == 00) {
+        clearInterval(timer);
+        alert(`Time Up!
+
+          Your Score = ${score}
+
+          Click to play again`)
+        location.reload();
+      } else if (secs < 10) {
+        secs = "0" + secs;
       }
-      $('#timer').text(mins + ":" + secs)
+      $('#timer').text(`Time: ` + secs)
     }, 1000);
   }; //end clock function
 

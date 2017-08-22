@@ -91,9 +91,10 @@ html {
   100%  {left: 15%; top: 30%;}
 }
 @keyframes faded {
-  0%   { left:100%; opacity:1; }
-  25%  {left:50%; opacity: 0;}
-  50%  { left: 0%; opacity:1; }
-  75%  {opacity: 0;}
-  100% { left: 100%; opacity:1; }
+  0%   { left:0%; opacity:0; }
+  20%  {left:50%; opacity: 1;}
+  40%  { left: 100%; opacity:0; }
+  60%  {left: 50%; opacity: 1;}
+  80%  {left: 25%;  opacity: 0;}
+  100% { left: 0%; opacity:1; }
 }
