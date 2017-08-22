@@ -90,19 +90,25 @@
         $('#t2').css('position', 'absolute');
         $('#t2').css('animation-name', 'lvl_3');
         miss = 400;
-        updateGame();
         break;
       case (score >= 2000 && score <= 3000):
-        console.log('lvl-4: Nelly');
+        console.log('lvl-4: ducks');
         background = 'assets/duckhunt.png';
         bullseye = 'assets/duck.png';
         $('img').css('max-height', '5em');
         speed = '5s';
         miss = 800;
-        updateGame();
         break;
+        case (score >= 3000):
+          console.log('lvl-5 hypnosis');
+          background = 'assets/hypnosis.jpg';
+          speed = '10s';
+          miss = 1600;
+          break;
       default:
+      console.log('Something has gone horribly wrong');
     }
+    updateGame();
   }; //End scoreKeeper
 
   //Changes target img , speed & background-image.
