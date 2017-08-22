@@ -3,7 +3,7 @@
   var score = 0;
   var speed = '8s';
   var bullseye = 'assets/target.png';
-
+  var miss = 200;
 
   $('.start img').on('click', function() {
     console.log('start clicked');
@@ -39,14 +39,14 @@
         score = score + 250;
         console.log('target hit');
         $target.attr('src', 'assets/hit.png');
-        $target.delay(750).fadeOut();
+        $target.delay(500).fadeOut();
 
         setTimeout(() => {
           $target.attr('src', `${bullseye}`);
           $target.show(0);
         }, 2500)
       } else {
-        score = score - 100;
+        score = score - miss;
         console.log('not a target');
       }
 
@@ -79,6 +79,7 @@
         $('#t2').css('position', 'absolute');
         $('#t2').css('animation-name', 'lvl_3');
         speed = '5s';
+        miss = 400;
         updateTarget();
         break;
       default:
