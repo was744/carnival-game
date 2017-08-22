@@ -1,13 +1,16 @@
 html {
-  background: url('assets/welcome.jpg') no-repeat center center ;
+  background: url('assets/welcome.jpg') no-repeat center center;
   background-size: cover;
   font-family: 'Berkshire Swash', cursive;
   font-size: 24px;
   min-height: 100vh;
   cursor: url('assets/crosshair.png'), crosshair;
 }
+
+
 /*START MENU*/
-.rules{
+
+.rules {
   align-items: flex-end;
   display: flex;
   justify-content: center;
@@ -15,16 +18,80 @@ html {
   clear: both;
   bottom: 0px;
 }
-.start{
+
+.start {
   text-align: center;
 }
 
+
 /*GAMEPLAY*/
-#timer{
+
+#timer {
   float: left;
   text-align: left;
 }
-#score{
+
+#score {
   float: right;
   margin: 0px;
+}
+
+/*.target {
+  position: relative;
+}*/
+
+#t0{
+    margin-top: 50px;
+  animation-name: leftRight;
+  position: relative;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+/*Animations*/
+
+@keyframes leftRight {
+  0% {
+    left: 1%;
+  }
+  50% {
+    left: 99%;
+  }
+  100% {
+    left: 1%
+  }
+}
+
+@keyframes rightLeft {
+  0% {
+    left: 99%;
+  }
+  50% {
+    left: 9%;
+  }
+  100% {
+    left: 91%
+  }
+}
+
+@keyframes lvl_2 {
+  0%  {left: 0%; bottom: 20%;}
+  20% {left: 20%; bottom: 0%;}
+  40% {left:40%; bottom: 20%;}
+  60% {left: 60%;  bottom: 0%;}
+  80% {left: 80%; bottom: 20%;}
+  100%  {left: 100%;  bottom: 0%;}
+}
+
+@keyframes lvl_3 {
+  0%  {left: 15%;top: 30%;}
+  25% {left: 7%; top:70%;}
+  50% {left: 7%; top:50%;}
+  75%  {left: 15%; top: 30%; transform: rotate(-45deg);}
+  100%  {left: 15%; top: 30%;}
+}
+@keyframes faded {
+  0%   { left:100%; opacity:1; }
+  50%  { left: 0%; opacity:0; }
+  100% { left: 100%; opacity:1; }
 }
