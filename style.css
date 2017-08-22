@@ -36,10 +36,6 @@ html {
   margin: 0px;
 }
 
-/*.target {
-  position: relative;
-}*/
-
 #t0{
     margin-top: 50px;
   animation-name: leftRight;
@@ -48,7 +44,13 @@ html {
   animation-iteration-count: infinite;
 }
 
-/*Animations*/
+/*PAUSE*/
+.pause{
+  display: none;
+  text-align: center;
+}
+
+/*ANIMATIONS*/
 
 @keyframes leftRight {
   0% {

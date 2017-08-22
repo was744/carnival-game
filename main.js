@@ -2,11 +2,14 @@
   console.log('Ready to play');
   $("#hello").get(0).play();
 
-  var score = 1500;
+  var score = 0;
   var miss = 200;
   var speed = '8s';
   var bullseye = 'assets/target.png';
   var background = 'assets/game.jpg';
+  var timer;
+  var secs = 60;
+
 
   $('.start img').on('click', function() {
     console.log('start clicked');
@@ -60,7 +63,7 @@
 
 
   function scoreKeeper() {
-    $('#score span').text('Score: '+ score);
+    $('#score span').text('Score: ' + score);
     //Not intended purpose for switch, possibly change to if else statements???
     switch (true) {
       case (score < 0):
@@ -111,9 +114,23 @@
     }
   }; //end updateGame
 
+  //Pause function.   p = pause  anyother = resume
+  //Add condition to be sure not in start menu
+  $(document).on('keypress', function(e) {
+    if (e.which == 112) {
+      console.log('Pause');
+      clearInterval(timer);
+      $('.container').hide();
+      $('.pause').show();
+    } else {
+      $('.pause').hide();
+      clock();
+      $('.container').show();
+    }
+  });//End Pause
+
   //Playtime
   function clock() {
-    var secs = 60;
 
     timer = setInterval(function() {
       secs--
@@ -121,15 +138,15 @@
         clearInterval(timer);
         alert(`Time Up!
 
-          Your Score = ${score}
+            Your Score = ${score}
 
-          Click to play again`)
+            Click to play again`)
         location.reload();
       } else if (secs < 10) {
         secs = "0" + secs;
       }
       $('#timer').text(`Time: ` + secs)
-    }, 1000);
+    }, 1000)
   }; //end clock function
 
 })();
