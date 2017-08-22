@@ -100,3 +100,13 @@ html {
   80%  {left: 25%;  opacity: 0;}
   100% { left: 0%; opacity:1; }
 }
+@keyframes lvl-5 {
+  0%   { left:0%; opacity:1; }
+  15%  {left:0%; opacity: 0;}
+  30%  { top: 70%; opacity:0; }
+  45%  { top: 70%; opacity: 1;}
+  60%  {left: 80%;  opacity: 0;}
+  75% { left: 80%; opacity:1; }
+  90%   { left:0%; opacity:0; }
+  100%  {left:0%; opacity: 1;}
+}

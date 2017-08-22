@@ -10,7 +10,7 @@
   var timer;
   var secs = 60;
 
-//***SART CLICKED****///
+  //***SART CLICKED****///
   $('.start img').on('click', function() {
     console.log('start clicked');
     $('html').css('background-image', `url(${background})`);
@@ -99,14 +99,15 @@
         speed = '5s';
         miss = 800;
         break;
-        case (score >= 3000):
-          console.log('lvl-5 hypnosis');
-          background = 'assets/hypnosis.jpg';
-          speed = '10s';
-          miss = 1600;
-          break;
+      case (score >= 3000):
+        console.log('lvl-5 hypnosis');
+        background = 'assets/hypnosis.jpg';
+        speed = '10s';
+        miss = 1600;
+        $('#t0').css('animation-name', 'lvl-5');
+        break;
       default:
-      console.log('Something has gone horribly wrong');
+        console.log('Something has gone horribly wrong');
     }
     updateGame();
   }; //End scoreKeeper
