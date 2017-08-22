@@ -10,7 +10,7 @@
   var timer;
   var secs = 60;
 
-
+//***SART CLICKED****///
   $('.start img').on('click', function() {
     console.log('start clicked');
     $('html').css('background-image', `url(${background})`);
@@ -20,15 +20,13 @@
 
   function createGame() {
     clock();
-    scoreKeeper();
-
-    //Build game
+    //Builds targets
     for (var i = 0; i < 3; i++) {
       $('.container').append(`
         <div class = 'target'>
         <img id = 't${i}' src=${bullseye}>
         </div>`);
-      //Start animation
+      //Lvl-1 animation//
       $(`#t${i}`).css({
         'position': 'relative',
         'animation-name': 'leftRight',
@@ -37,12 +35,14 @@
       })
     }
 
-    // HIT-event -
-    //----must be in createGame() -> scope issue?
+    // HIT CHECKER
+    //If click is on target img -> add points
+    //If not, checks if pause menu is open
+    //If !hit on target && pause menu !open -> record miss
     $('html').on('click', function(e) {
       var $target = $(e.target);
-      console.log($target);
-      $('#fire').get(0).play();
+      $('#fire').get(0).play(); //Fire sound
+
       if ($target.is('img')) {
         score = score + 250;
         console.log('target hit');
@@ -65,6 +65,7 @@
   } //END createGame()
 
 
+  //Creates all levels > lvl-1 as defined by score. Called every click().
   function scoreKeeper() {
     $('#score span').text('Score: ' + score);
     //Not intended purpose for switch, possibly change to if else statements???
@@ -104,7 +105,8 @@
     }
   }; //End scoreKeeper
 
-  //Changes target img and speed according according to lvl
+  //Changes target img , speed & background-image.
+  //Values set and function called in scoreKeeper();
   function updateGame() {
     console.log(speed);
     for (var i = 0; i < 3; i++) {
@@ -117,7 +119,8 @@
     }
   }; //end updateGame
 
-  //PAUSE function.   p = pause  anyother = resume
+  //**********/PAUSE function//////////////////
+  //p = pause  anyother = resume
   //Add condition to be sure not in start menu
   $(document).on('keypress', function(e) {
     if (e.which == 112) {
@@ -132,9 +135,8 @@
     }
   }); //End Pause
 
-  //Playtime
+  //*****GAME TIMER*****///////
   function clock() {
-
     timer = setInterval(function() {
       secs--
       if (secs == 00) {
