@@ -41,6 +41,7 @@
     //----must be in createGame() -> scope issue?
     $('html').on('click', function(e) {
       var $target = $(e.target);
+      console.log($target);
       $('#fire').get(0).play();
       if ($target.is('img')) {
         score = score + 250;
@@ -52,6 +53,8 @@
           $target.attr('src', `${bullseye}`);
           $target.show(0);
         }, 2500)
+      } else if ($('.pause').is(':visible')) {
+        console.log('it works');
       } else {
         score = score - miss;
         console.log('not a target');
@@ -114,7 +117,7 @@
     }
   }; //end updateGame
 
-  //Pause function.   p = pause  anyother = resume
+  //PAUSE function.   p = pause  anyother = resume
   //Add condition to be sure not in start menu
   $(document).on('keypress', function(e) {
     if (e.which == 112) {
@@ -127,7 +130,7 @@
       clock();
       $('.container').show();
     }
-  });//End Pause
+  }); //End Pause
 
   //Playtime
   function clock() {
