@@ -30,6 +30,8 @@ Targets get harder to hit the more you score.
 
 -FUTURE FEATURES---------
 
+-Prevent accidental dragging of targets
+-Mobile phone responsiveness
 ~HighScores board
 ~Allow users to define game speed
 ~User defined timer
