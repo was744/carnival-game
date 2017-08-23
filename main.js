@@ -45,7 +45,7 @@
 
       if ($target.is('img')) {
         score = score + 250;
-        console.log('target hit');
+        console.log('HIT');
         $target.attr('src', 'assets/hit.png');
         $target.delay(300).fadeOut();
 
@@ -54,10 +54,10 @@
           $target.show(0);
         }, 2500)
       } else if ($('.pause').is(':visible')) {
-        console.log('it works');
+        console.log('IN PAUSE MENU');
       } else {
         score = score - miss;
-        console.log('not a target');
+        console.log('MISS');
       }
 
       scoreKeeper();
