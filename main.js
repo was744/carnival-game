@@ -91,7 +91,7 @@
         $('#t2').css('animation-name', 'lvl_3');
         miss = 400;
         break;
-      case (score >= 2000 && score <= 3000):
+      case (score >= 2000 && score < 3000):
         console.log('lvl-4: ducks');
         background = 'assets/duckhunt.png';
         bullseye = 'assets/duck.png';
@@ -99,15 +99,20 @@
         speed = '5s';
         miss = 800;
         break;
-      case (score >= 3000):
+      case (score >= 3000 && score < 4000):
         console.log('lvl-5 hypnosis');
-        background = 'assets/hypnosis.jpg';
-        speed = '10s';
-        miss = 1600;
+        background = 'assets/hypnosis.gif';
+        speed = '5s';
         bullseye = 'assets/Hypnosis-Circle.png';
         $('#t0').css('animation-name', 'lvl-5');
         $('#t2').css('animation-name', 'rotation');
         $('.container').css('color', 'white');
+        break;
+      case (score >= 4000):
+        console.log('lvl-6');
+        bullseye = 'assets/portal.png';
+        background = 'assets/rm.jpg';
+        $('img').css('max-height', '7em');
         break;
       default:
         console.log('Something has gone horribly wrong');
