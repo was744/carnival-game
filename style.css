@@ -36,19 +36,22 @@ html {
   margin: 0px;
 }
 
-#t0{
-    margin-top: 50px;
+#t0 {
+  margin-top: 50px;
   animation-name: leftRight;
   position: relative;
   animation-duration: 8s;
   animation-iteration-count: infinite;
 }
 
+
 /*PAUSE*/
-.pause{
+
+.pause {
   display: none;
   text-align: center;
 }
+
 
 /*ANIMATIONS*/
 
@@ -77,36 +80,123 @@ html {
 }
 
 @keyframes lvl_2 {
-  0%  {left: 0%; bottom: 20%;}
-  20% {left: 20%; bottom: 0%;}
-  40% {left:40%; bottom: 20%;}
-  60% {left: 60%;  bottom: 0%;}
-  80% {left: 80%; bottom: 20%;}
-  100%  {left: 100%;  bottom: 0%;}
+  0% {
+    left: 0%;
+    bottom: 20%;
+  }
+  20% {
+    left: 20%;
+    bottom: 0%;
+  }
+  40% {
+    left: 40%;
+    bottom: 20%;
+  }
+  60% {
+    left: 60%;
+    bottom: 0%;
+  }
+  80% {
+    left: 80%;
+    bottom: 20%;
+  }
+  100% {
+    left: 100%;
+    bottom: 0%;
+  }
 }
 
 @keyframes lvl_3 {
-  0%  {left: 15%;top: 30%;}
-  25% {left: 7%; top:70%;}
-  50% {left: 7%; top:50%;}
-  75%  {left: 15%; top: 30%; transform: rotate(-45deg);}
-  100%  {left: 15%; top: 30%;}
+  0% {
+    left: 15%;
+    top: 30%;
+  }
+  25% {
+    left: 7%;
+    top: 70%;
+  }
+  50% {
+    left: 7%;
+    top: 50%;
+  }
+  75% {
+    left: 15%;
+    top: 30%;
+    transform: rotate(-45deg);
+  }
+  100% {
+    left: 15%;
+    top: 30%;
+  }
 }
+
 @keyframes faded {
-  0%   { left:0%; opacity:0; }
-  20%  {left:50%; opacity: 1;}
-  40%  { left: 100%; opacity:0; }
-  60%  {left: 50%; opacity: 1;}
-  80%  {left: 25%;  opacity: 0;}
-  100% { left: 0%; opacity:1; }
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  20% {
+    left: 50%;
+    opacity: 1;
+  }
+  40% {
+    left: 100%;
+    opacity: 0;
+  }
+  60% {
+    left: 50%;
+    opacity: 1;
+  }
+  80% {
+    left: 25%;
+    opacity: 0;
+  }
+  100% {
+    left: 0%;
+    opacity: 1;
+  }
 }
+
 @keyframes lvl-5 {
-  0%   { left:0%; opacity:1; }
-  15%  {left:0%; opacity: 0;}
-  30%  { top: 70%; opacity:0; }
-  45%  { top: 70%; opacity: 1;}
-  60%  {left: 80%;  opacity: 0;}
-  75% { left: 80%; opacity:1; }
-  90%   { left:0%; opacity:0; }
-  100%  {left:0%; opacity: 1;}
+  0% {
+    left: 0%;
+    opacity: 1;
+  }
+  15% {
+    left: 0%;
+    opacity: 0;
+  }
+  30% {
+    top: 70%;
+    opacity: 0;
+  }
+  45% {
+    top: 70%;
+    opacity: 1;
+  }
+  60% {
+    left: 80%;
+    opacity: 0;
+  }
+  75% {
+    left: 80%;
+    opacity: 1;
+  }
+  90% {
+    left: 0%;
+    opacity: 0;
+  }
+  100% {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }

@@ -8,7 +8,7 @@
   var bullseye = 'assets/target.png';
   var background = 'assets/game.jpg';
   var timer;
-  var secs = 60;
+  var secs = 600;
 
   //***SART CLICKED****///
   $('.start img').on('click', function() {
@@ -104,7 +104,10 @@
         background = 'assets/hypnosis.jpg';
         speed = '10s';
         miss = 1600;
+        bullseye = 'assets/Hypnosis-Circle.png';
         $('#t0').css('animation-name', 'lvl-5');
+        $('#t2').css('animation-name', 'rotation');
+        $('.container').css('color', 'white');
         break;
       default:
         console.log('Something has gone horribly wrong');
