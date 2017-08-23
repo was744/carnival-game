@@ -8,7 +8,7 @@
   var bullseye = 'assets/target.png';
   var background = 'assets/game.jpg';
   var timer;
-  var secs = 600;
+  var secs = 60;
 
   //***SART CLICKED****///
   $('.start img').on('click', function() {
