@@ -119,7 +119,7 @@
       case (score >= 5000 && score < 6000):
         console.log('lvl-7');
         background = 'assets/bikini-bottom.jpg';
-        bullseye = 'jelly.png';
+        bullseye = 'assets/jelly.png';
         speed = '3s';
         break;
       case (score >= 6000):
