@@ -134,19 +134,22 @@
     }
   }; //end updateGame
 
-  //**********/PAUSE function//////////////////
+  //**********/PAUSE MENU//////////////////
   //p = pause  anyother = resume
   //Add condition to be sure not in start menu
+  //else if resolves issue when clock accelerated on multiple keypress
   $(document).on('keypress', function(e) {
     if (e.which == 112) {
       console.log('Pause');
       clearInterval(timer);
       $('.container').hide();
       $('.pause').show();
-    } else {
+    } else if ($('.pause').is(':visible')) {
       $('.pause').hide();
       clock();
       $('.container').show();
+    } else {
+      console.log('nothing happens');
     }
   }); //End Pause
 
