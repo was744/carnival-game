@@ -1,4 +1,5 @@
 CARNIVAL STYLE SHOOTING GALLERY
+https://was744.github.io/carnival-game/
 
 This application is built using HTML, CSS and jquery. A Google Font is used to give a carnival feel.
 Use cases, workflow and wireframes can be found on Trello @: https://trello.com/b/FekhhvdO/unit-1-project
