@@ -25,11 +25,6 @@ Miss too much and you lose
 Targets get harder to hit the more you score.
 
 
--KNOWN ISSUES---------
-
-~User can scroll right when target moves out of viewport on mobile
-
-
 -FUTURE FEATURES------
 
 -Prevent accidental dragging of targets

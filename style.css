@@ -25,6 +25,10 @@ html {
 
 
 /*GAMEPLAY*/
+.container{
+  overflow: hidden;
+
+}
 
 #timer {
   float: left;
@@ -207,7 +211,6 @@ html {
 
 /*phones*/
 @media only screen
-/*and (min-device-width: )*/
 and (max-device-width: 767px){
   html{
     font-size: 12px;
