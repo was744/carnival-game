@@ -205,6 +205,18 @@ html {
 
 /*MEDIA SCREENS*/
 
+/*phones*/
+@media only screen
+/*and (min-device-width: )*/
+and (max-device-width: 767px){
+  html{
+    font-size: 12px;
+  }
+img{
+  max-height: 7em;
+}
+}
+
 /*iPad*/
 @media only screen
 and (min-device-width : 768px)
