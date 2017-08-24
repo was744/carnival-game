@@ -14,7 +14,7 @@ Each level was individually built and tested. Utilizing a switch statement to ha
 User can pause the game by pressing 'p' and resume by pressing any other. This menu was slightly more difficult to create than I thought it would be. Two of the biggest bugs I encountered resulted from the creation of the pause menu; 1) a timer issue that would accelerate the clock & 2) user clicking would record a miss (-pts) no matter what screen user was on.
 
 
--RULES---------------
+-RULES----------------
 
 You have 1 minute to score as many points as you can
 Hit the targets by clicking on them
@@ -23,7 +23,13 @@ Each miss deducts points
 Miss too much and you lose
 Targets get harder to hit the more you score.
 
--FUTURE FEATURES---------
+
+-KNOWN ISSUES---------
+
+~User can scroll right when target moves out of viewport on mobile
+
+
+-FUTURE FEATURES------
 
 -Prevent accidental dragging of targets
 -Mobile responsiveness
