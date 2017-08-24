@@ -117,8 +117,10 @@
         $('#t1').css('animation-name', 'faded');
         break;
       case (score >= 5000):
-        console.log('lvl-7 (WIP)');
-        speed = '2s';
+        console.log('lvl-7');
+        background = 'assets/bikini-bottom.jpg'
+        bullseye = 'jelly.png';
+        speed = '3s';
         break;
       default:
         console.log('Something has gone horribly wrong');
