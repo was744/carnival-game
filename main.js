@@ -116,11 +116,16 @@
         $('#t0').css('animation-name', 'rightLeft');
         $('#t1').css('animation-name', 'faded');
         break;
-      case (score >= 5000):
+      case (score >= 5000 && score < 6000):
         console.log('lvl-7');
-        background = 'assets/bikini-bottom.jpg'
+        background = 'assets/bikini-bottom.jpg';
         bullseye = 'jelly.png';
         speed = '3s';
+        break;
+      case (score >= 6000):
+        console.log('lvl-8');
+        background = 'assets/ocean.jpg';
+        bullseye = 'assets/shark.png';
         break;
       default:
         console.log('Something has gone horribly wrong');
