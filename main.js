@@ -54,8 +54,9 @@
           $target.show(0);
         }, 2500)
       } else if ($('.pause').is(':visible')) {
-        console.log('IN PAUSE MENU');
+        console.log('Game is paused');
       } else {
+        //Lose points
         score = score - miss;
         console.log('MISS');
       }
@@ -128,7 +129,7 @@
         bullseye = 'assets/shark.png';
         break;
       default:
-        console.log('Something has gone horribly wrong');
+        //Should only run on game build and while paused
     }
     updateGame();
   }; //End scoreKeeper
@@ -136,7 +137,6 @@
   //Changes target img , speed & background-image.
   //Values set and function called in scoreKeeper();
   function updateGame() {
-    console.log(speed);
     for (var i = 0; i < 3; i++) {
       //target img
       $(`t${i}`).attr('src', `${bullseye}`);
