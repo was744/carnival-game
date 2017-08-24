@@ -108,13 +108,17 @@
         $('#t2').css('animation-name', 'rotation');
         $('.container').css('color', 'white');
         break;
-      case (score >= 4000):
+      case (score >= 4000 && score < 5000):
         console.log('lvl-6');
         bullseye = 'assets/portal.png';
         background = 'assets/rm.jpg';
         $('img').css('max-height', '7em');
         $('#t0').css('animation-name', 'rightLeft');
         $('#t1').css('animation-name', 'faded');
+        break;
+      case (score >= 5000):
+        console.log('lvl-7 (WIP)');
+        speed = '2s';
         break;
       default:
         console.log('Something has gone horribly wrong');
