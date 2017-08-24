@@ -113,6 +113,8 @@
         bullseye = 'assets/portal.png';
         background = 'assets/rm.jpg';
         $('img').css('max-height', '7em');
+        $('#t0').css('animation-name', 'rightLeft');
+        $('#t1').css('animation-name', 'faded');
         break;
       default:
         console.log('Something has gone horribly wrong');

@@ -23,11 +23,6 @@ Each miss deducts points
 Miss too much and you lose
 Targets get harder to hit the more you score.
 
-
--ISSUES--------------
-1) Clock accelerates on any keypress other than 'p'
-
-
 -FUTURE FEATURES---------
 
 -Prevent accidental dragging of targets
